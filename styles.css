@@ -1,0 +1,46 @@
+body {
+    background-color: antiquewhite;
+    box-sizing: border-box;
+}
+
+.btn {
+    border: 2px solid black;
+    height: 10%;
+    width: 20%;
+}
+
+.buttons {
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+.container { 
+    border: 2px solid black;
+    border-radius: 3%;
+    background-color: rgb(228, 231, 215);
+    height: 70vh;
+    margin: 10vh auto;
+    padding: 10px;
+    width: 50vh;
+}
+
+.display {
+    background-color: white;
+    height: 30%;
+    width: 100%;
+    border: 4px solid green;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    padding: 5px;
+}
+
+.display-text {
+    font-size: 40px;
+    margin: 0;
+}
+
+.input-text {
+    margin-right: 0;
+}
