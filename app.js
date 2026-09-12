@@ -11,17 +11,49 @@ function divide(firstValue, secondValue) {
     return (firstValue/secondValue);
 };
 //0 = add, 1 = subtract, 2 = multiply, 3 =  divide.
-function operate(operator, firstValue, secondValue) {
-    if (operator == 0) {
+function operate(operatorUsed, firstValue, secondValue) {
+    if (operatorUsed == 0) {
         return add(firstValue, secondValue)
-    } else if (operator == 1) {
+    } else if (operatorUsed == 1) {
         return subtract(firstValue, secondValue)
-    } else if (operator == 2) {
+    } else if (operatorUsed == 2) {
         return multiply(firstValue, secondValue)
-    } else if (operator == 3) {
+    } else if (operatorUsed == 3) {
         return divide(firstValue, secondValue)
     }
-} 
+} ;
 
-console.log(operate(3,12,4));
+let initialNumber;
+let subsequentNumber;
+let operator;
+
+const testButton = document.querySelectorAll(".nb");
+
+
+
+
+
+testButton.forEach(button => {
+    button.addEventListener('click', () => {
+        btnValue = button.textContent;
+        initialNumber = btnValue;
+        console.log(initialNumber)
+        const input = document.querySelector(".input-text");
+        input.textContent =  initialNumber;
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+//use this format to link the function
+//console.log(operate(3,12,4));
 

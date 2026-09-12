@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: aliceblue;
     box-sizing: border-box;
@@ -36,11 +41,17 @@ body {
     margin: auto;
 }
 
+.line-text {
+    text-align: right;
+    font-size: 1.2em;
+}
+
 .result-line {
     border: 1px solid black;
     height: 49%;
     width: 99%;
     margin: auto;
+    
 }
 .section {
     border: 1px solid black;
