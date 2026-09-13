@@ -23,23 +23,36 @@ function operate(operatorUsed, firstValue, secondValue) {
     }
 } ;
 
-let initialNumber;
-let subsequentNumber;
-let operator;
+let initialNumber = "";
+let subsequentNumber = 0;
+let operator = "";
 
-const testButton = document.querySelectorAll(".nb");
+const numberButton = document.querySelectorAll(".nb");
+const operatorButton = document.querySelectorAll(".ftn-btn");
+
+console.table(operatorButton)
 
 
 
 
 
-testButton.forEach(button => {
+numberButton.forEach(button => {
     button.addEventListener('click', () => {
         btnValue = button.textContent;
         initialNumber = btnValue;
         console.log(initialNumber)
         const input = document.querySelector(".input-text");
-        input.textContent =  initialNumber;
+        input.textContent +=  initialNumber;
+    })
+})
+
+operatorButton.forEach(button => {
+    button.addEventListener('click', () => {
+        btnValue = button.textContent;
+        operator = btnValue;
+        console.log(initialNumber)
+        const input = document.querySelector(".input-text");
+        input.textContent +=  operator;
     })
 })
 
