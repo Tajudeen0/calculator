@@ -69,7 +69,7 @@ operatorButton.forEach(button => {
             input.textContent =  input.textContent.slice(0,-1);
             input.textContent += btnValue;   
             operator = btnValue;   
-        } else if (!(operator == "") && !(subsequentNumber == "")) {
+        } else {
             result.textContent = operate(operator, initialNumber, subsequentNumber)
             initialNumber = result.textContent;
             input.textContent = result.textContent;

@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -16,15 +16,15 @@ body {
     padding: 10px;
     background-color: white;
     box-sizing: border-box;
-    /* Set a typical calculator aspect ratio (e.g., width:height) */
+    Set a typical calculator aspect ratio (e.g., width:height)
     aspect-ratio: 3 / 4;
 
   /* Scale based on width, but cap it */
-    width: min(90vw, 380px);
+    /* width: min(90vw, 380px); */
 
   /* Prevent it from overflowing vertically on short screens */
-    max-height: 85dvh;
-}
+    /* max-height: 85dvh; */
+/* }
 
 .display {
     height: 20%;
@@ -61,4 +61,126 @@ body {
     display: block;
     width: 90%;
     margin: 0 auto 2%;
+} * */
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at 50% 30%, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-body {
+    display: flex;
+    flex-direction: column;
+    width: min(90vw, 360px);
+    background-color: #1e2430;
+    border-radius: 28px;
+    padding: 24px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Screen Display */
+.display {
+    background: #151922;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-line, .result-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: auto;
+}
+
+.line-text {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.input-text {
+    color: #94a3b8;
+    font-size: 1.15rem;
+    min-height: 1.4em;
+}
+
+.result-text {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-height: 1.3em;
+}
+
+/* Layout Rows */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Button Base */
+.btn {
+    flex: 1;
+    height: 58px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #2b3240;
+    color: #f8fafc;
+    transition: all 0.12s ease;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    filter: brightness(1.15);
+}
+
+.btn:active {
+    transform: scale(0.96);
+    filter: brightness(0.95);
+}
+
+/* Operator & Function Keys */
+.ftn-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.op-btn {
+    background-color: #475569;
+    color: #f8fafc;
+}
+
+/* Specific Accent for Equals */
+.section:last-child .op-btn {
+    background-color: #10b981;
+    font-weight: 600;
 }
